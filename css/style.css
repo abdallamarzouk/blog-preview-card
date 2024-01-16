@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+/* Theme */
+:root {
+  --main-color-Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+  --main-font-family: "Figtree", sans-serif;
+  --paragraph-font-size: 16px;
+  --main-padding: 10px;
+  --secondry-padding: 15px;
+}
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color-Yellow);
+}
+.container {
+  background-color: var(--White);
+  padding: 15px;
+  border: 1px solid var(--Black);
+  border-radius: 12px;
+  box-shadow: 7px 7px var(--Black);
+}
+.container:hover {
+  box-shadow: 10px 10px var(--Black);
+}
+.card-img {
+  width: 100%;
+  display: block;
+  padding-bottom: var(--main-padding);
+}
+.card-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var(--main-color-Yellow);
+  border: none;
+  border-radius: 2px;
+  color: var(--Black);
+  font-family: var(--main-font-family);
+  font-weight: 700;
+}
+.card-history {
+  display: block;
+  padding: var(--main-padding) 0;
+  font-family: var(--main-font-family);
+  font-size: 14px;
+}
+.card-head {
+  padding-bottom: var(--main-padding);
+  font-family: var(--main-font-family);
+  font-weight: 800;
+}
+.card-head:hover {
+  color: var(--main-color-Yellow);
+  cursor: pointer;
+}
+.card-info {
+  padding-bottom: var(--main-padding);
+  color: var(--Grey);
+  font-size: var(--paragraph-font-size);
+  font-family: var(--main-font-family);
+}
+.card-foot {
+  display: flex;
+  align-items: center;
+  padding-top: var(--main-padding);
+}
+.card-foot img {
+  width: 40px;
+  padding-right: var(--main-padding);
+  cursor: pointer;
+}
+.card-owner {
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+/* Mobile view */
+@media only screen and (max-width: 375px) {
+  .container {
+    height: 70%;
+  }
+  .card-img {
+    padding-bottom: var(--secondry-padding);
+  }
+  .card-history {
+    padding: var(--secondry-padding) 0;
+  }
+  .card-head {
+    padding-bottom: var(--secondry-padding);
+  }
+  .card-info {
+    padding-bottom: var(--secondry-padding);
+  }
+  .card-foot {
+    padding-top: var(--secondry-padding);
+  }
+}
